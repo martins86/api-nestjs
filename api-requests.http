@@ -1,0 +1,25 @@
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+
+@apiVersionDefault = v1
+
+# POST - Criando um novo usuário
+# @name createUser
+POST http://{{host}}/api/{{apiVersionDefault}}/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Thiago Martins",
+  "email": "martins86@gmail.com",
+  "password": "fakePassword"
+}
+
+###
+
+# GET - Listando usuários
+# @name listUsers
+GET http://{{host}}/api/{{apiVersionDefault}}/usuarios HTTP/1.1
+Content-Type: application/json
+
+###
