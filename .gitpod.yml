@@ -8,7 +8,7 @@ ports:
   - name: My app
     description: study app
     port: 3000
-    onOpen: open-preview
+    onOpen: open-browser
     visibility: public
 
 # Tarefas na Inicialização
