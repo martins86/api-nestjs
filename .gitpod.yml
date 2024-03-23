@@ -5,7 +5,7 @@ image:
 
 # Portas e Ações
 ports:
-  - name: Web App TMF Lab
+  - name: My app
     description: study app
     port: 4200
     onOpen: open-browser
