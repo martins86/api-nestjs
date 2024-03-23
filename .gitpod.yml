@@ -15,7 +15,7 @@ ports:
 tasks:
   - name: Setup, Install
     before: export NG_CLI_ANALYTICS=ci
-    command: node -v
+    init: npm i -g @nestjs/cli
 
 # Extensões do VScode
 vscode:
@@ -37,3 +37,4 @@ vscode:
     - streetsidesoftware.code-spell-checker-portuguese-brazilian
     - formulahendry.auto-rename-tag
     - formulahendry.auto-close-tag
+    - humao.rest-client
