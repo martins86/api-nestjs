@@ -4,6 +4,8 @@
 
 @apiVersionDefault = v1
 
+@idUser = {{listUsers.response.body.$.[0].id}}
+
 # POST - Criando um novo usuário
 # @name createUser
 POST http://{{host}}/api/{{apiVersionDefault}}/usuarios HTTP/1.1
@@ -20,6 +22,24 @@ Content-Type: application/json
 # GET - Listando usuários
 # @name listUsers
 GET http://{{host}}/api/{{apiVersionDefault}}/usuarios HTTP/1.1
+Content-Type: application/json
+
+###
+
+# PUT - Atuslizando um usuário
+# @name EditUser
+PUT http://{{host}}/api/{{apiVersionDefault}}/usuarios/{{idUser}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Thiago Martins de Freitas"
+}
+
+###
+
+# GET - Deletando um usuário
+# @name DeleteUser
+DELETE http://{{host}}/api/{{apiVersionDefault}}/usuarios/{{idUser}} HTTP/1.1
 Content-Type: application/json
 
 ###
